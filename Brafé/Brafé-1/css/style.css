@@ -1,6 +1,11 @@
 :root {
     --brafe_color1: #252525;
     --brafe_color2: #fff;
+    --brafe_color3: #e7e4d8;
+    --brafe_color4: #d9d3c8;
+    --brafe_color5: #492901;
+    --brafe_color6: #c17139;
+    --brafe_color7: #d7a54d;
 }
 
 * {
@@ -138,4 +143,78 @@ ul {
     text-align: center;
     margin: 20px auto;
     max-width: 460px;
+}
+
+.produtos {
+    background: var(--brafe_color3);
+    padding: 60px 0;
+    border-top: 3px solid var(--brafe_color4);
+    border-bottom: 3px solid var(--brafe_color4);
+}
+
+.produtos-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.produtos-container::after,
+.produtos-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.produtos-item {
+    width: 300px;
+    float: left;
+    margin: 0 10px 20px 10px;
+}
+
+.produtos-item h2 {
+    text-align: center;
+    font-size: 2.25em;
+    margin-bottom: 20px;
+}
+
+.produtos-item h2::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+    background: currentColor;
+    border: 5px solid var(--brafe_color3);
+    box-shadow: 0 0 0 10px currentColor;
+}
+
+h2.produtos-paulista::before {
+    color: var(--brafe_color5);
+}
+
+h2.produtos-carioca::before {
+    color: var(--brafe_color6)
+}
+
+h2.produtos-mineiro::before {
+    color: var(--brafe_color7);
+}
+
+.produtos-item p {
+    font-size: 0.875em;
+    line-height: 1.4em;
+}
+
+.produtos-btn {
+    width: 180px;
+    border: 3px solid;
+    color: var(--brafe_color1);
+    text-decoration: none;
+    display: block;
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+    margin: 20px auto 0 auto;
 }
